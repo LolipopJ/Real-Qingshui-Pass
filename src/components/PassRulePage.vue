@@ -1,11 +1,15 @@
 <template>
-<div>
-  <app-bar title="平安成电智慧通行"></app-bar>
-  <div class="spinner">
-    <md-progress-spinner class="md-primary" :md-stroke="4"
-      :md-diameter="50" md-mode="indeterminate"></md-progress-spinner>
+  <div>
+    <app-bar title="平安成电智慧通行" />
+    <div class="spinner">
+      <md-progress-spinner
+        class="md-primary"
+        :md-stroke="4"
+        :md-diameter="50"
+        md-mode="indeterminate"
+      />
+    </div>
   </div>
-</div>
 </template>
 
 <script>

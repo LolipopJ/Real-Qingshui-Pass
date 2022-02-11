@@ -1,57 +1,114 @@
 <template>
   <div class="wechat-page">
     <div class="wechat-header">
-      <div class="title" @click="gotoSetting">微信</div>
+      <div
+        class="title"
+        @click="gotoSetting"
+      >
+        微信
+      </div>
       <div class="trailing">
-        <img class="icon-button" src="../assets/search.svg" />
-        <img class="icon-button" src="../assets/add.svg"
-          @click="showFloatTab = !showFloatTab"/>
+        <img
+          class="icon-button"
+          src="../assets/search.svg"
+        >
+        <img
+          class="icon-button"
+          src="../assets/add.svg"
+          @click="showFloatTab = !showFloatTab"
+        >
 
         <transition name="float-in">
-          <div class="float-tab" v-if="showFloatTab">
-            <div class="float-mask" @click="showFloatTab = false"></div>
-            <div class="float-tab-item" v-for="(ft, i) in floatTabs"
-              v-bind:key="i" @click="scan">
-              <img :src="ft.icon" alt="" class="float-tab-icon" />
-              <div class="float-tab-name">{{ ft.name }}</div>
+          <div
+            v-if="showFloatTab"
+            class="float-tab"
+          >
+            <div
+              class="float-mask"
+              @click="showFloatTab = false"
+            />
+            <div
+              v-for="(ft, i) in floatTabs"
+              :key="i"
+              class="float-tab-item"
+              @click="scan"
+            >
+              <img
+                :src="ft.icon"
+                alt=""
+                class="float-tab-icon"
+              >
+              <div class="float-tab-name">
+                {{ ft.name }}
+              </div>
             </div>
           </div>
         </transition>
       </div>
     </div>
     <div class="wechat-content">
-      <div class="message-item" v-for="(m, i) in messages" v-bind:key="i">
-        <div :style="m.style" class="avatar"></div>
+      <div
+        v-for="(m, i) in messages"
+        :key="i"
+        class="message-item"
+      >
+        <div
+          :style="m.style"
+          class="avatar"
+        />
         <div class="message-body">
           <div class="header">
-            <div class="name">{{ m.name }}</div>
-            <div class="message-time">{{ m.time }}</div>
+            <div class="name">
+              {{ m.name }}
+            </div>
+            <div class="message-time">
+              {{ m.time }}
+            </div>
           </div>
-          <div class="content">{{ m.content }}</div>
+          <div class="content">
+            {{ m.content }}
+          </div>
         </div>
       </div>
     </div>
     <div class="wechat-tab">
-      <div class="tab-item" v-for="(t, i) in tabs" v-bind:key="i">
-        <img :src="t.icon" class="tab-icon" />
-        <div v-if="t.selected" class="tab-name selected">{{ t.name }}</div>
-        <div v-else class="tab-name">{{ t.name }}</div>
+      <div
+        v-for="(t, i) in tabs"
+        :key="i"
+        class="tab-item"
+      >
+        <img
+          :src="t.icon"
+          class="tab-icon"
+        >
+        <div
+          v-if="t.selected"
+          class="tab-name selected"
+        >
+          {{ t.name }}
+        </div>
+        <div
+          v-else
+          class="tab-name"
+        >
+          {{ t.name }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-const fakeMessages = `无敌可爱妮妮酱就🙌,你怎么不守男德
-拼爹爹购物群,陶菊：《巴菲龙》
-妹妹,[转账]朋友已确认收款
+const fakeMessages = `听我的🙌,明天去看电影吧
+名门望族,陶菊: 助力冬奥，赢全套冰墩墩纪念勋章
+陈菊,[转账]朋友已确认收款
 文件传输助手,论文.pdf
 订阅号消息,极市平台:如何用深度学习来做检索...
 站起来,LZY:我明天就位
 中国银行微银行,交易提醒
-2021届硕士通知群,叶老师:@小朱 @10班李广 打卡
+2018级本科通知群,叶老师:@小朱 @10班李广 打卡
 指艺推拿预约专用😄2,希:@A指艺王飞飞 我说话给忘了，后天...
-2020暑假留校群,叶老师:打卡`.split('\n').map((v, i) => {
+2022寒假留校群,叶老师:打卡`.split('\n').map((v, i) => {
   const [name, content] = v.split(',')
   const date = new Date(new Date() - parseInt(Math.random() * 3600 * 1000 * 12))
   const hour = date.getHours().toString().padStart(2, '0')

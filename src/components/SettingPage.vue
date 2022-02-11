@@ -8,32 +8,32 @@
         <md-list-item>
           <md-field>
             <label>入校提示信息</label>
-            <md-input v-model="enterText"></md-input>
+            <md-input v-model="enterText" />
           </md-field>
         </md-list-item>
 
         <md-list-item>
           <md-field>
             <label>出校校提示信息</label>
-            <md-input v-model="leaveText"></md-input>
+            <md-input v-model="leaveText" />
           </md-field>
         </md-list-item>
 
         <md-list-item>
           <md-field>
             <label>身份类型</label>
-            <md-input v-model="personType"></md-input>
+            <md-input v-model="personType" />
           </md-field>
         </md-list-item>
 
         <md-list-item>
           <md-field>
             <label>名字</label>
-            <md-input v-model="name"></md-input>
+            <md-input v-model="name" />
           </md-field>
         </md-list-item>
 
-        <md-divider></md-divider>
+        <md-divider />
 
         <md-subheader>其他设置</md-subheader>
         <md-list-item>
@@ -42,8 +42,8 @@
             <span>如在微信内使用，则无需展示 AppBar</span>
           </div>
 
-          <md-switch v-model="showAppBar"></md-switch>
-      </md-list-item>
+          <md-switch v-model="showAppBar" />
+        </md-list-item>
       </md-list>
     </div>
   </div>

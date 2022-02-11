@@ -2,24 +2,49 @@
   <div class="scan-page">
     <div class="content">
       <div class="video-container">
-        <video id="video" width="480" height="640" autoplay></video>
+        <video
+          id="video"
+          width="480"
+          height="640"
+          autoplay
+        />
       </div>
       <div class="top-content top-icons icon-group">
-        <img class="icon-button" src="../assets/close.svg" />
-        <img class="icon-button" src="../assets/more.svg">
+        <img
+          class="icon-button"
+          src="../assets/close.svg"
+        >
+        <img
+          class="icon-button"
+          src="../assets/more.svg"
+        >
       </div>
       <div class="bottom-content">
-        <div class="tip">扫二维码 / 条码 / 小程序码</div>
+        <div class="tip">
+          扫二维码 / 条码 / 小程序码
+        </div>
         <div class="bottom-icons icon-group">
-          <img class="icon-button" src="../assets/qr-icon.svg" />
-          <img class="icon-button" src="../assets/album.svg">
+          <img
+            class="icon-button"
+            src="../assets/qr-icon.svg"
+          >
+          <img
+            class="icon-button"
+            src="../assets/album.svg"
+          >
         </div>
       </div>
     </div>
     <div class="tab">
-      <div class="tab-name">扫码</div>
-      <div class="tab-name">识物</div>
-      <div class="tab-name">翻译</div>
+      <div class="tab-name">
+        扫码
+      </div>
+      <div class="tab-name">
+        识物
+      </div>
+      <div class="tab-name">
+        翻译
+      </div>
     </div>
   </div>
 </template>

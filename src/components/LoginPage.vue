@@ -3,9 +3,17 @@
     <div class="progress-bar">
       <!-- <md-progress-bar md-mode="determinate" :md-value="amount" class="md-accent"></md-progress-bar> -->
     </div>
-    <img src="../assets/wechat.svg" alt="" class="wechat-icon">
-    <div class="login-tips">近期你已经授权登录过电子科技大学保卫处</div>
-    <div class="login-tips">自动登录中</div>
+    <img
+      src="../assets/wechat.svg"
+      alt=""
+      class="wechat-icon"
+    >
+    <div class="login-tips">
+      近期你已经授权登录过电子科技大学保卫处
+    </div>
+    <div class="login-tips">
+      自动登录中
+    </div>
   </div>
 </template>
 

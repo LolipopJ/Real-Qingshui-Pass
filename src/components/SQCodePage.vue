@@ -1,14 +1,23 @@
 <template>
-    <div class="sqcode-page">
-        <app-bar title="商丘疫情防控码"/>
-        <img src="../assets/banner.jpg" />
-        <div class="page-content">
-            <div class="time">{{date}}</div>
-            <img src="../assets/sqr.jpg" class="qr-code">
-            <div class="tip">谢谢配合 请通行!</div>
-            <div class="close-tip">请点击左上方的×退出页面</div>
-        </div>
+  <div class="sqcode-page">
+    <app-bar title="商丘疫情防控码" />
+    <img src="../assets/banner.jpg">
+    <div class="page-content">
+      <div class="time">
+        {{ date }}
+      </div>
+      <img
+        src="../assets/sqr.jpg"
+        class="qr-code"
+      >
+      <div class="tip">
+        谢谢配合 请通行!
+      </div>
+      <div class="close-tip">
+        请点击左上方的×退出页面
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
